@@ -6,6 +6,9 @@ export default {
     "./node_modules/flowbite/**/*.js"
   ],
   theme: {
+    fontFamily:{
+      sans: ["Open Sans","Padauk","sans", "sans-serif"],
+    },
     extend: {},
   },
   plugins: [

@@ -8,6 +8,8 @@ import ProductPage from "./pages/ProductPage";
 import VoucherPage from "./pages/VoucherPage";
 import { createBrowserRouter } from "react-router-dom";
 import SalePage from "./pages/SalePage";
+import ProductCreatePage from "./pages/ProductCreatePage";
+import ProductEditPage from "./pages/ProductEditPage";
 
 const router=createBrowserRouter(
     [
@@ -23,6 +25,14 @@ const router=createBrowserRouter(
                 {
                     path:"/product",
                     element:<ProductPage/>
+                },
+                {
+                    path:"/product/create",
+                    element:<ProductCreatePage/>
+                },
+                {
+                    path:"/product/edit/:id",
+                    element:<ProductEditPage/>
                 },
                 {
                     path:"/sale",

@@ -3,7 +3,7 @@ import { HiOutlineChevronRight } from "react-icons/hi";
 import { HiHome } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 
-const Breadcrumbs = ({ currentPageTitle, link }) => {
+const Breadcrumbs = ({ currentPageTitle, links }) => {
   return (
     <div className="w-full flex gap-3 mb-5">
       {/* <!-- Breadcrumb --> */}
@@ -17,14 +17,28 @@ const Breadcrumbs = ({ currentPageTitle, link }) => {
               to="/"
               className="inline-flex gap-3  items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
             >
-             <HiHome/>
+              <HiHome />
               Home
             </Link>
           </li>
-          
+
+          {/* //loop */}
+          {links &&
+            links.map((link, index) => (
+              <li key={index} className="inline-flex items-center">
+                <Link
+                  to={link.path}
+                  className="inline-flex gap-3  items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
+                >
+                  <HiOutlineChevronRight />
+                  {link.title}
+                </Link>
+              </li>
+            ))}
+
           <li aria-current="page">
             <div className="flex items-center">
-            <HiOutlineChevronRight />
+              <HiOutlineChevronRight />
               <span className="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">
                 {currentPageTitle}
               </span>

@@ -1,0 +1,75 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "product_name": "Custom Website Design",
+        "category": "Web Development",
+        "price": 500,
+        "created_at": "2024-09-27T08:15:30Z"
+      },
+      {
+        "id": 2,
+        "product_name": "E-Commerce Website Development",
+        "category": "Web Development",
+        "price": 1200,
+        "created_at": "2024-09-28T09:45:00Z"
+      },
+      {
+        "id": 3,
+        "product_name": "SEO Optimization",
+        "category": "Digital Marketing",
+        "price": 300,
+        "created_at": "2024-09-29T11:30:45Z"
+      },
+      {
+        "id": 4,
+        "product_name": "Web Application Development",
+        "category": "Web Development",
+        "price": 1500,
+        "created_at": "2024-09-30T12:20:00Z"
+      },
+      {
+        "id": 5,
+        "product_name": "Content Management System (CMS) Setup",
+        "category": "Web Development",
+        "price": 800,
+        "created_at": "2024-10-01T14:10:00Z"
+      },
+      {
+        "id": 6,
+        "product_name": "Website Maintenance and Support",
+        "category": "Technical Support",
+        "price": 150,
+        "created_at": "2024-10-02T15:25:10Z"
+      },
+      {
+        "id": 7,
+        "product_name": "UI/UX Design Consulting",
+        "category": "Digital Marketing",
+        "price": 600,
+        "created_at": "2024-10-03T08:15:00Z"
+      },
+      {
+        "id": 8,
+        "product_name": "Mobile-First Development",
+        "category": "Mobile Development",
+        "price": 900,
+        "created_at": "2024-10-04T09:40:30Z"
+      },
+      {
+        "id": 9,
+        "product_name": "API Integration Service",
+        "category": "Web Development",
+        "price": 400,
+        "created_at": "2024-10-05T10:50:45Z"
+      },
+      {
+        "id": 10,
+        "product_name": "Custom WordPress Plugin Development",
+        "category": "WordPress Development",
+        "price": 750,
+        "created_at": "2024-10-06T12:20:50Z"
+      }
+    ]
+  }
+  

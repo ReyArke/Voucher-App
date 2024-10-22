@@ -2,7 +2,17 @@ import React from 'react'
 import { HiSearch } from "react-icons/hi";
 import { HiComputerDesktop, HiOutlinePencil, HiOutlineTrash, HiPlus } from "react-icons/hi2";
 import { Link } from 'react-router-dom';
+import VoucherListSkeletonLoad from './VoucherListSkeletonLoad';
+import VoucherListRow from './VoucherListRow';
+import useSWR from 'swr';
+
+
+const fetcher = (url) => fetch(url).then((res) => res.json());
 const VoucherList = () => {
+   const { data, isLoading, error } = useSWR(
+    import.meta.env.VITE_API_URL + "/vouchers",
+    fetcher
+   )
   return (
     <div>
     <div className="flex justify-between mb-5">
@@ -30,7 +40,7 @@ const VoucherList = () => {
         <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
           <tr>
             <th scope="col" className="px-6 py-3">
-              #
+              #Voucher_id
             </th>
             <th scope="col" className="px-6 py-3">
               Customer name
@@ -54,38 +64,9 @@ const VoucherList = () => {
               There is no Voucher
             </td>
           </tr>
-          <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-            <td className="px-6 py-4">1</td>
-            <th
-              scope="row"
-              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-            >
-             Zaw Zaw
-            </th>
-
-            <td className="px-6 py-4">zawzaw@gmail.com</td>
-            <td className="px-6 py-4 text-end">
-              <p className="text-xs">2024-09-12</p>
-              <p className="text-xs">12am</p>
-            </td>
-           
-            <td className="px-6 py-4 text-end">
-              <div className="inline-flex rounded-md shadow-sm" role="group">
-                <button
-                  type="button"
-                  className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
-                >
-                  <HiOutlinePencil />
-                </button>
-                <button
-                  type="button"
-                  className="px-4 py-2 text-sm font-medium text-red-500 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
-                >
-                  <HiOutlineTrash />
-                </button>
-              </div>
-            </td>
-          </tr>
+          {!isLoading && data?.map((voucher) => (
+           <VoucherListRow key={voucher.id} voucher={voucher}  />
+          )) }
         </tbody>
       </table>
     </div>

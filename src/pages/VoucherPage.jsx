@@ -10,7 +10,7 @@ const VoucherPage = () => {
       <Container>
       <Breadcrumbs currentPageTitle={"Voucher Module"} />
       <VoucherList/>
-      <SaleFrom/>
+      
       </Container>
       
     </div>

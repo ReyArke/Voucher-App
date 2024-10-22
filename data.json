@@ -77,5 +77,124 @@
       "created_at": "2024-10-16T15:16:30.656Z",
       "id": 11
     }
+  ],
+  "vouchers": [
+    {
+      "voucher_id": "INV-20241022-9918",
+      "voucher_name": "Kyaw ",
+      "voucher_email": "Kyaw@gmail.com",
+      "sale_date": "2024-10-22",
+      "all_correct": true,
+      "records": [
+        {
+          "product": {
+            "id": 3,
+            "product_name": "SEO Optimization",
+            "category": "Digital Marketing",
+            "price": 300,
+            "created_at": "2024-09-29T11:30:45Z"
+          },
+          "product_id": 3,
+          "quantity": "5",
+          "cost": 1500,
+          "created_at": "2024-10-22T15:56:21.102Z"
+        },
+        {
+          "product": {
+            "id": 5,
+            "product_name": "Content Management System (CMS) Setup",
+            "category": "Web Development",
+            "price": 800,
+            "created_at": "2024-10-01T14:10:00Z"
+          },
+          "product_id": 5,
+          "quantity": "6",
+          "cost": 4800,
+          "created_at": "2024-10-22T15:56:25.037Z"
+        }
+      ],
+      "total": 6300,
+      "tax": 315,
+      "net_total": 6615,
+      "id": 1
+    },
+    {
+      "voucher_id": "INV-20241022-2640",
+      "voucher_name": "Kyaw",
+      "voucher_email": "Kyaw@gmail.com",
+      "sale_date": "2024-10-22",
+      "all_correct": true,
+      "records": [
+        {
+          "product": {
+            "id": 2,
+            "product_name": "E-Commerce Website Development",
+            "category": "Web Development",
+            "price": 1200,
+            "created_at": "2024-09-28T09:45:00Z"
+          },
+          "product_id": 2,
+          "quantity": "4",
+          "cost": 4800,
+          "created_at": "2024-10-22T18:15:08.571Z"
+        }
+      ],
+      "total": 4800,
+      "tax": 240,
+      "net_total": 5040,
+      "id": 2
+    },
+    {
+      "voucher_id": "INV-20241022-8610",
+      "voucher_name": "Kyaw",
+      "voucher_email": "Kyaw@gmail.com",
+      "sale_date": "2024-10-22",
+      "all_correct": true,
+      "records": [
+        {
+          "product": {
+            "product_name": "Custom Website Design Ui",
+            "price": "1090",
+            "category": "Web Development",
+            "created_at": "2024-10-16T15:16:30.656Z",
+            "id": 11
+          },
+          "product_id": 11,
+          "quantity": "7",
+          "cost": 7630,
+          "created_at": "2024-10-22T18:15:30.673Z"
+        }
+      ],
+      "total": 7630,
+      "tax": 381.5,
+      "net_total": 8011.5,
+      "id": 4
+    },
+    {
+      "voucher_id": "INV-20241022-6489",
+      "voucher_name": "Jiker",
+      "voucher_email": "Kyaw@gmail.com",
+      "sale_date": "2024-10-22",
+      "all_correct": true,
+      "records": [
+        {
+          "product": {
+            "id": 2,
+            "product_name": "E-Commerce Website Development",
+            "category": "Web Development",
+            "price": 1200,
+            "created_at": "2024-09-28T09:45:00Z"
+          },
+          "product_id": 2,
+          "quantity": "5",
+          "cost": 6000,
+          "created_at": "2024-10-22T18:16:14.498Z"
+        }
+      ],
+      "total": 6000,
+      "tax": 300,
+      "net_total": 6300,
+      "id": 6
+    }
   ]
 }
